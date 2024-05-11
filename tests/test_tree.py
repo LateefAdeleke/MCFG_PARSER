@@ -1,5 +1,6 @@
 import pytest
 from src.mcfg_parser.tree import MCFGTree
+from typing import Set
 from src.mcfg_parser.grammar import MCFGRuleElement, MCFGRule, MCFGRuleElementInstance, MCFGGrammar
 #test continuous_tree
 def test_mcftree_basic():

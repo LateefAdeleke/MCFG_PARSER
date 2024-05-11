@@ -1,7 +1,7 @@
 
 from src.mcfg_parser.tree import MCFGTree
 from src.mcfg_parser.grammar import MCFGRuleElement, MCFGRule, MCFGRuleElementInstance, MCFGGrammar
-from typing import List, Tuple, Union
+from typing import List, Tuple, Union, Set
 
 DataType = str
 Span = Tuple[int, int]

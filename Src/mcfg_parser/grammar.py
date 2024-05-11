@@ -1,5 +1,14 @@
 import re
 from collections import defaultdict
+from typing import Set, Tuple, List
+from typing import Literal
+from functools import lru_cache
+
+Mode = Literal["recognize", "parse"]
+
+StringVariables = tuple[int, ...]
+SpanIndices = tuple[int, ...]
+SpanMap = dict[int, SpanIndices]
 
 StringVariables = tuple[int, ...]
 """The following classes are used for implementing multiple context-free grammars (MCFG). 

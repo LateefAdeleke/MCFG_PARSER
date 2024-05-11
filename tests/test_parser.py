@@ -5,7 +5,6 @@ from src.mcfg_parser.parser import MCFGGrammarParser
 #grammar = MCFGGrammar.from_string(grammar_definition)
 
 
-
 @pytest.fixture
 def example_grammar():
     grammar_rules = [
@@ -60,24 +59,19 @@ def example_grammar():
         "C(that)"
     ]
 
-    # Parse each rule and create MCFGRule instances
-    grammar = [MCFGRule.from_string(rule) for rule in grammar_rules]
-
-    return grammar
+    rules = {MCFGRule.from_string(rule) for rule in grammar_rules}
+    return MCFGGrammar(rules, 'S')
 
 
 def test_parse_simple_sentence(example_grammar):
-    parser = MCFGGrammarParser(example_grammar, start_symbol='S')
+    parser = MCFGGrammarParser(example_grammar)
     sentence = ['the', 'greyhound', 'believes']
-    # MCFGParser.grammar.start_symbol = 'S'
     parse_tree = parser.parse(sentence)
-    # expected_tree
-    # assert parse_tree == expected_tree
-    assert parse_tree is None
+    assert parse_tree is not None  # Expecting a successful parse
 
 
 def test_parse_invalid_sentence(example_grammar):
-    parser = MCFGGrammarParser(example_grammar, start_symbol='S')
+    parser = MCFGGrammarParser(example_grammar)
     sentence = ['the', 'human', 'jumped']
     parse_tree = parser.parse(sentence)
-    assert parse_tree is None
+    assert parse_tree is None  # No parse expected

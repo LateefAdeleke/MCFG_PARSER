@@ -19,7 +19,14 @@ git clone https://github.com/LateefAdeleke/MCFG_PARSER.git
 
 3. Install the package: pip install MCFG_PARSER
 
+##Environments
 
+| Package | Version |
+| ------- | ------- |
+| iniconfig | 2.0.0 |
+| packaging | 24.0 |
+| pluggy | 1.5.0 |
+| pytest | 8.2.0 |
 ## Usage
 Here is how you can use MCFG_Parser to parse sentence:
 from MCFG_Parser.parser import Parser
@@ -51,5 +58,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgements
 Thanks to Shieber et al. 1995 and Kallmeyer 2013 for the foundational concepts and methodologies utilized in this project.
 Special thanks to Aaron for an amazing introduction to computational linguistics.
+Big Thanks to Daniel, who we worked together on this project.
 ## Contact
 ladeleke@ur.rochester.edu
