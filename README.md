@@ -36,11 +36,10 @@ from MCFG_Parser.grammar import load_grammar
 grammar = load_grammar('/Users/lateefadeleke/Desktop/MCFG_Parser/src/mcfg_parser/grammar.py')
 
 # Initialize the parser with the loaded grammar
-parser = Parser(grammar)
+parser = MCFGGrammarParser(example_grammar)
 
 # Parse a sentence
-parsed_output = parser.parse("The man that killed the cat loves the dog that barks")
-print(parsed_output)
+parse_tree = parser.parse(sentence)
 
 ## Contributing
 Contributions to MyParser are welcome! Here are a few ways you can help:
