@@ -1,0 +1,25 @@
+[tool.hatch.build.targets.wheel]
+packages = ["desktop/ MCFG_PARSER_LATEEF/src/mcfg_parser"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "MCFG_PARSER"
+version = "0.0.1"
+authors = [
+  { name="Lateef Adeleke", email="ladeleke@ur.rochester.edu" },
+]
+description = "A python package for parsing with MCFG"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/LateefAdeleke/MCFG_PARSER"
+Issues = "https://github.com/LateefAdeleke/MCFG_PARSER/issues"
